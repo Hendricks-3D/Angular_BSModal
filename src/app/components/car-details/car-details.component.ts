@@ -56,13 +56,15 @@ export class CarDetailsComponent implements OnInit {
 
   showModal() {
     this.userService.getAllGasStation().subscribe((data) => {
-      this.data = data.data;
-      console.log(data.data);
+      this.userData = data.data;
     });
 
-    const initialState = {
-      data: this.userData,
-    };
-    const ModalRef = this.modalService.show(DataModalComponent, this.userData);
+    setTimeout(() => {
+      console.log(this.userData);
+      const ModalRef = this.modalService.show(
+        DataModalComponent,
+        this.userData
+      );
+    }, 2000);
   }
 }

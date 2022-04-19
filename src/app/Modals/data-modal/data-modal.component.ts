@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { DeepCopy } from 'src/app/functions/Util-functions';
 import { Data } from 'src/app/Interfaces/dataInterface';
 
 @Component({
@@ -12,13 +13,18 @@ import { Data } from 'src/app/Interfaces/dataInterface';
 // }
 export class DataModalComponent implements OnInit {
   @Output() save = new EventEmitter<Data>();
-  @Input() data = [] as Array<Data>;
-  filteredData!: Data;
-  constructor() {}
+  //@Input() userData = [] as Array<Data>;
 
-  ngOnInit(): void {
-    console.log(this.data);
+  _userData = [] as Array<Data>;
+  @Input() set userData(driver: Array<Data>) {
+    this._userData = DeepCopy(driver);
   }
+  filteredData!: Data;
+  constructor() {
+    console.log(this._userData);
+  }
+
+  ngOnInit(): void {}
 
   saveData() {
     // const dataEvent: DataEvent = {
