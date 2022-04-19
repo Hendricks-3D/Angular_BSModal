@@ -60,7 +60,6 @@ export class CarDetailsComponent implements OnInit {
       console.log(data.data);
     });
 
-    console.log(this.data);
     const initialState = {
       data: this.userData,
     };

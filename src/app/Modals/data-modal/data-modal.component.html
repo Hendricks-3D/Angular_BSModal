@@ -3,10 +3,15 @@
 <div class="modal-body">
   <h4>User Data will be displayed here</h4>
 
-  <div *ngFor="let user of data">
+  <!-- <div *ngFor="let user of data">
     {{ user.first_name }}
-  </div>
+  </div> -->
 </div>
+<mat-card class="mb-8 mt-9" *ngFor="let user of data">
+  <mat-card-title>{{ user?.first_name }} {{ user?.id }} </mat-card-title>
+  <mat-card-content> {{ user?.avatar }} </mat-card-content>
+  <mat-card-footer> {{ user?.email }} </mat-card-footer>
+</mat-card>
 
 <div class="modal-footer">
   <button type="button" class="btn btn-primary">Save</button>

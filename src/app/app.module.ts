@@ -10,12 +10,14 @@ import { AppComponent } from './app.component';
 import { CarDetailsComponent } from './components/car-details/car-details.component';
 import { CommentsComponent } from './components/comments/comments.component';
 import { DisplayDataComponent } from './components/display-data/display-data.component';
+import { DataModalComponent } from './Modals/data-modal/data-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
     CarDetailsComponent,
     CommentsComponent,
     DisplayDataComponent,
+    DataModalComponent,
   ],
   imports: [
     BrowserModule,
