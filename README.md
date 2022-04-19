@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.4.
 
-This projects show case Modals Using ngx-bootstrap package, Routing, @Output and Input Decorators and Emitters
+This projects show case Modals Using ngx-bootstrap package, Routing, @Output() and @Input() decorators and Emitters
 
 ## Development server
 
